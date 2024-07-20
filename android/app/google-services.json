@@ -1,0 +1,90 @@
+{
+  "project_info": {
+    "project_number": "202759056429",
+    "project_id": "cures-9495f",
+    "storage_bucket": "cures-9495f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:202759056429:android:c22b1060cbf5b0d76ddca4",
+        "android_client_info": {
+          "package_name": "com.example.curesathi_doctor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "202759056429-53178u15i6imia14ltgavcs3c000krk0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYD7Yo74DwR2ApPGB6BGu95Tw7OYjKY5o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "202759056429-1e73oo6a8r3kag69fbplabbln7b54ca6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "202759056429-7og0ibp77n7hq3kusqtgs1uog3ta8e6i.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.curesathiDoctor.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:202759056429:android:7de770554c5f8cd46ddca4",
+        "android_client_info": {
+          "package_name": "com.example.tpop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "202759056429-utjm7uaj3ka8ra1nl1fft9714rsgt8g7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tpop",
+            "certificate_hash": "913110b4dae10c275391b6f44ee9c64497c692ce"
+          }
+        },
+        {
+          "client_id": "202759056429-53178u15i6imia14ltgavcs3c000krk0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYD7Yo74DwR2ApPGB6BGu95Tw7OYjKY5o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "202759056429-1e73oo6a8r3kag69fbplabbln7b54ca6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "202759056429-7og0ibp77n7hq3kusqtgs1uog3ta8e6i.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.curesathiDoctor.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
