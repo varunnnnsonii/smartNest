@@ -2,10 +2,10 @@ import 'dart:async';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:fluttercuredoc/AuthenticationRepository.dart';
 import 'package:fluttercuredoc/Compo/NetwokManager.dart';
 import 'package:fluttercuredoc/LogSign/SignUp/success_screen.dart';
-import 'package:get/get.dart';
 
 class VerifyEmailController extends GetxController {
   static VerifyEmailController get instance => Get.find();

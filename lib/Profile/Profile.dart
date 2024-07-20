@@ -1,11 +1,12 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
+import 'package:fluttercuredoc/Compo/profile_menu.dart';
 import 'package:fluttercuredoc/Compo/setting_menu.dart';
 import 'package:fluttercuredoc/Compo/user_controller.dart';
 import 'package:fluttercuredoc/LogSign/Welcome.dart';
 import 'package:fluttercuredoc/Profile/EditProfile.dart';
-import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key,

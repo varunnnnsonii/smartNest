@@ -1,12 +1,12 @@
 
 import 'package:flutter/cupertino.dart';
+import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:fluttercuredoc/Compo/NetwokManager.dart';
 import 'package:fluttercuredoc/Compo/full_screen_loader.dart';
 import 'package:fluttercuredoc/Compo/user_controller.dart';
 import 'package:fluttercuredoc/Compo/user_repo.dart';
 import 'package:fluttercuredoc/Profile/Profile.dart';
-import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
 
 class UpdateNameController extends GetxController{
   static UpdateNameController get instance =>Get.find();

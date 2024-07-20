@@ -15,7 +15,7 @@ class OTPScreen extends StatelessWidget {
               'Otp',
               style:TextStyle(fontWeight: FontWeight.bold, fontSize: 80.0),
             ),
-            Text('otp incoming'.toUpperCase()),
+            Text('otp incoming'.toUpperCase(), ),
             const SizedBox(height: 40.0),
             const Text("hellloooo support@codingwitht.com", textAlign: TextAlign.center),
             const SizedBox(height: 20.0),

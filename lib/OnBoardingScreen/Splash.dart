@@ -1,10 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:fluttercuredoc/OnBoardingScreen/OnBoardingScreen.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:lottie/lottie.dart';
+import 'package:fluttercuredoc/OnBoardingScreen/OnBoardingScreen.dart';
 
 class SplashScreen extends StatelessWidget {
   @override

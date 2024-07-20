@@ -9,7 +9,7 @@ import 'package:lottie/lottie.dart';
   builder:(_)=>PopScope(
   canPop: false,
   child: Container(
-  color: Colors.grey,
+  color: Color(0xff7151A9),
   width: double.infinity,
   height: double.infinity,
   child: Column(
@@ -46,17 +46,21 @@ class AnimationLoaderWidget extends StatelessWidget{
   Widget build(BuildContext context) {
     return Center(
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Lottie.asset(animation,
             width: 200,
           ),
           SizedBox(height: 16,),
-          Text(
-            text,
-            style: TextStyle(
-                fontSize: 40,
-                fontWeight: FontWeight.bold
+          Padding(
+            padding: const EdgeInsets.only(left: 30.0),
+            child: Text(
+              text,
+              style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold
+              ),
             ),
           ),
           SizedBox(height: 24,),
@@ -65,7 +69,7 @@ class AnimationLoaderWidget extends StatelessWidget{
             width: 250,
             child: OutlinedButton(
               onPressed: onActionPressed,
-              style: OutlinedButton.styleFrom(backgroundColor: Colors.brown),
+              style: OutlinedButton.styleFrom(backgroundColor: Color(0xff7151A9)),
               child: Text(
                 actionText!,
                 style: TextStyle(fontSize: 20),

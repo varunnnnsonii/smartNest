@@ -12,19 +12,19 @@ class OnboardingContents {
 
 List<OnboardingContents> contents = [
   OnboardingContents(
-    title: "Track Your work and get the result",
-    image: "assets/images/MDoc.png",
-    desc: "Remember to keep track of your professional accomplishments.",
+    title: "Filter your meals",
+    image: "assets/images/f354da0dff20388a4de8ad0100d6f1a7-removebg-preview.png",
+    desc: "Filter out your meals based on spending limit and diet, and get personalized recommendations of meals.",
   ),
   OnboardingContents(
-    title: "Stay organized with team",
-    image: "assets/images/Mdoc2.png",
+    title: "Get Live Outlets",
+    image: "assets/images/2265bf36f4ea60ca74c665e94cc58c0c-removebg-preview.png",
     desc:
-    "But understanding the contributions our colleagues make to our teams and companies.",
+    "Get to know the live location of outlets and book your reservation.",
   ),
   OnboardingContents(
-    title: "Get notified when work happens",
-    image: "assets/images/Fdoc.png",
+    title: "Get notified when community engage",
+    image: "assets/images/5aa46c23083a60b2dd691147e8b4a98d-removebg-preview.png",
     desc:
     "Take control of notifications, collaborate live or on your own time.",
   ),

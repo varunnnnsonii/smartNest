@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fluttercuredoc/AuthenticationRepository.dart';
 import 'package:get/get.dart';
-
+import 'package:fluttercuredoc/AuthenticationRepository.dart';
+import 'package:fluttercuredoc/LogSign/Login/Login.dart';
 class SuccessScreen extends StatelessWidget {
   const SuccessScreen({super.key});
 

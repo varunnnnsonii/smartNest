@@ -2,12 +2,12 @@ import 'dart:ffi';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:fluttercuredoc/Compo/profile_menu.dart';
 import 'package:fluttercuredoc/Compo/user_controller.dart';
+import 'package:fluttercuredoc/LogSign/Welcome.dart';
 import 'package:fluttercuredoc/Profile/ChangeName.dart';
 import 'package:fluttercuredoc/Update_Phoneno/ChangePhoneno.dart';
-import 'package:get/get.dart';
-
 
 class EditProfile extends StatelessWidget {
   const EditProfile({
@@ -142,12 +142,12 @@ class EditProfile extends StatelessWidget {
               ),
               ProfileMenu(
                 title: 'Gender',
-                value: 'COding_cod',
+                value: 'Male',
                 onPressed: () {},
               ),
               ProfileMenu(
                 title: 'Date of Birth',
-                value: 'COding_cod',
+                value: '15/05/2003',
                 onPressed: () {},
               ),
 
@@ -156,7 +156,9 @@ class EditProfile extends StatelessWidget {
 
               Center(
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.to(WelcomeScreen());
+                  },
                   child: Text(
                     "Log out",
                     style: TextStyle(color: Colors.red, fontSize: 15),

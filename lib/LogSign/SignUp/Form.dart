@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:fluttercuredoc/LogSign/SignUp/SignUp_backend.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:fluttercuredoc/LogSign/SignUp/SignUp_backend.dart';
+import 'package:fluttercuredoc/LogSign/SignUp/VerifyEmail.dart';
+import 'package:fluttercuredoc/LogSign/Welcome.dart';
 
 class Validator{
   static String? validateEmptyText(String? fieldName,String ?value){
@@ -49,53 +51,126 @@ class SignUpFormWidget extends StatelessWidget {
           children: [
             TextFormField(
               controller: controller.fullName,
-              validator: (value)=>Validator.validateEmptyText('FullName', value) ,
-              decoration: const InputDecoration(
-                  label: Text('FullName'),
-                  prefixIcon: Icon(Icons.person_outline_rounded)),
+              validator: (value) => Validator.validateEmptyText('FullName', value),
+              style: TextStyle(color: Colors.white), // Set input text color to white
+              decoration: InputDecoration(
+                labelText: 'FullName',
+                labelStyle: TextStyle(color: Colors.white), // Set title color to white
+                prefixIcon: Icon(Icons.person_outline_rounded, color: Colors.white), // Set icon color to white
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: BorderSide(color: Colors.white), // Set border color to white
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: BorderSide(color: Colors.white), // Set border color to white
+                ),
+              ),
             ),
+
             const SizedBox(height: 30 - 20),
             TextFormField(
                 controller: controller.userName,
               validator: (value)=>Validator.validateEmptyText('UserName', value) ,
-              decoration: const InputDecoration(
-                  label: Text('UserName'),
-                  prefixIcon: Icon(Icons.person_outline_rounded)),
-            ),
+              style: TextStyle(color: Colors.white), // Set input text color to white
+              decoration: InputDecoration(
+                labelText: 'UserName',
+                labelStyle: TextStyle(color: Colors.white), // Set title color to white
+                prefixIcon: Icon(Icons.person_outline_rounded, color: Colors.white), // Set icon color to white
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: BorderSide(color: Colors.white), // Set border color to white
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: BorderSide(color: Colors.white), // Set border color to white
+                ),
+              ),            ),
             const SizedBox(height: 30 - 20),
             TextFormField(
                 controller: controller.email,
               validator: (value)=>Validator.validateEmail(value) ,
-              decoration: const InputDecoration(
-                  label: Text('Email'), prefixIcon: Icon(Icons.email_outlined)),
-            ),
+              style: TextStyle(color: Colors.white), // Set input text color to white
+              decoration: InputDecoration(
+                labelText: 'Email',
+                labelStyle: TextStyle(color: Colors.white), // Set title color to white
+                prefixIcon: Icon(Icons.email_outlined, color: Colors.white), // Set icon color to white
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: BorderSide(color: Colors.white), // Set border color to white
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: BorderSide(color: Colors.white), // Set border color to white
+                ),
+              ),            ),
             const SizedBox(height: 30 - 20),
             TextFormField(
                 controller: controller.phoneNo,
               validator: (value)=>Validator.validatePhoneNumber( value) ,
-              decoration: const InputDecoration(
-                  label: Text('PhoneNo'), prefixIcon: Icon(Icons.numbers)),
+              style: TextStyle(color: Colors.white), // Set input text color to white
+              decoration: InputDecoration(
+                labelText: 'PhoneNo',
+                labelStyle: TextStyle(color: Colors.white), // Set title color to white
+                prefixIcon: Icon(Icons.phone, color: Colors.white), // Set icon color to white
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: BorderSide(color: Colors.white), // Set border color to white
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: BorderSide(color: Colors.white), // Set border color to white
+                ),
+              ),
             ),
             const SizedBox(height: 30 - 20),
             Obx(
               ()=>TextFormField(
                   controller: controller.password,
                 validator: (value)=>Validator.validatePassword( value) ,
+                style: TextStyle(color: Colors.white), // Set input text color to white
                 obscureText: controller.hidePassword.value,
                 decoration:InputDecoration(
-                    label: Text('Password'),
-                    prefixIcon: Icon(Icons.fingerprint),
+                  labelStyle: TextStyle(color: Colors.white),
+                    label: Text('Password',style: TextStyle(color: Colors.white),),
+                    prefixIcon: Icon(Icons.fingerprint,color: Colors.white,),
                     suffixIcon: IconButton(
                       onPressed:() => controller.hidePassword.value = !controller.hidePassword.value,
-                        icon: Icon(controller.hidePassword.value ? Icons.remove_red_eye_outlined :Icons.remove_red_eye),),),
+                        icon: Icon(controller.hidePassword.value ? Icons.remove_red_eye_outlined :Icons.remove_red_eye,color: Colors.white,),),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    borderSide: BorderSide(color: Colors.white), // Set border color to white
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    borderSide: BorderSide(color: Colors.white), // Set border color to white
+                  ),),
               ),
             ),
             const SizedBox(height: 30 - 10),
             SizedBox(
               width: double.infinity,
-              child: ElevatedButton(
-                onPressed: () => controller.signup(),
-                child: Text('Signup'.toUpperCase()),
+              child: Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [Color(0xffC7ADFF), Color(0xff7151A9)], // Your gradient colors
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                  ),
+                  borderRadius: BorderRadius.circular(30),
+                ),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    padding: EdgeInsets.only(top: 15, bottom: 15, left: 10, right: 10),
+                    backgroundColor: Colors.transparent, // Make button transparent
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+                  ),
+                  onPressed:() => controller.signup(),
+                  child: Text(
+                    "Signup".toUpperCase(),
+                    style: TextStyle(color: Colors.white, fontSize: 17),
+                  ),
+                ),
               ),
             )
           ],

@@ -1,8 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttercuredoc/Pages/Home.dart';
-import 'package:fluttercuredoc/Profile/Profile.dart';
 import 'package:get/get.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
+import 'package:fluttercuredoc/Pages/Home/Home.dart';
+import 'package:fluttercuredoc/Pages/userdata/user_profile.dart';
 class NavigationMenu extends StatelessWidget {
   const NavigationMenu({super.key});
 
@@ -17,9 +18,9 @@ class NavigationMenu extends StatelessWidget {
             topLeft: Radius.circular(20.0),
             topRight: Radius.circular(20.0),
           ),
-          color: Color(0xFFA4BFA7),
+          color: Color(0xff7151A9),
         ),
-        padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
+        padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 20.0),
         child: Obx(
           ()=>SalomonBottomBar(
             currentIndex: controller.currentIndex.value,
@@ -27,29 +28,23 @@ class NavigationMenu extends StatelessWidget {
           items: [
             /// Home
             SalomonBottomBarItem(
-              icon: Icon(Icons.home,size: 27,),
+              icon: Icon(CupertinoIcons.house_fill, size: 27),
               title: Text("Home"),
               selectedColor: Colors.white,
             ),
 
             /// Likes
             SalomonBottomBarItem(
-              icon: Icon(Icons.date_range_rounded,size: 25,),
-              title: Text("Appoint"),
+              icon: Icon(CupertinoIcons.map_fill, size: 27),
+              title: Text("Map"),
               selectedColor: Colors.white,
             ),
 
-            /// Search
-            SalomonBottomBarItem(
-              icon: Icon(Icons.chat_rounded,size: 25,),
-              title: Text("Chat"),
-              selectedColor: Colors.white,
-            ),
 
             /// Profile
             SalomonBottomBarItem(
-              icon: Icon(Icons.map_rounded,size: 25,),
-              title: Text("Map"),
+              icon: Icon(CupertinoIcons.person_2_fill, size: 27),
+              title: Text("Community"),
               selectedColor: Colors.white,
             ),
           ],
@@ -65,5 +60,5 @@ class NavigationMenu extends StatelessWidget {
 class NavigationController extends GetxController{
   final Rx<int> currentIndex= 0.obs;
 
-  final screens = [Home(),ProfilePage()];
+  final screens = [HomePage(),userprofile()];
 }

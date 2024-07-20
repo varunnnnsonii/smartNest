@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:fluttercuredoc/LogSign/ForgetPass/forget_password_backend.dart';
-import 'package:fluttercuredoc/LogSign/SignUp/Header.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:iconsax/iconsax.dart';
-
+import 'package:fluttercuredoc/LogSign/ForgetPass/Mail_Sent.dart';
+import 'package:fluttercuredoc/LogSign/ForgetPass/Otp.dart';
+import 'package:fluttercuredoc/LogSign/ForgetPass/forget_password_backend.dart';
+import 'package:fluttercuredoc/LogSign/SignUp/Header.dart';
 class ForgetPasswordMailScreen extends StatelessWidget {
   const ForgetPasswordMailScreen({Key? key}) : super(key: key);
 

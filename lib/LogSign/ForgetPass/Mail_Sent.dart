@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:fluttercuredoc/LogSign/ForgetPass/forget_password_backend.dart';
 import 'package:fluttercuredoc/LogSign/Login/Login.dart';
-import 'package:get/get.dart';
 
 class MailSent extends StatelessWidget {
   const MailSent({super.key, required this.email});

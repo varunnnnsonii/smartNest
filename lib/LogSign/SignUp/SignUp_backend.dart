@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:fluttercuredoc/AuthenticationRepository.dart';
 import 'package:fluttercuredoc/Compo/NetwokManager.dart';
 import 'package:fluttercuredoc/Compo/full_screen_loader.dart';
+import 'package:fluttercuredoc/Compo/userModel.dart';
 import 'package:fluttercuredoc/Compo/user_repo.dart';
 import 'package:fluttercuredoc/LogSign/SignUp/VerifyEmail.dart';
-import 'package:get/get.dart';
-
-import '../../Compo/userModel.dart';
 
 class SignupController extends GetxController {
   static SignupController get instance => Get.find();

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:fluttercuredoc/LogSign/SignUp/Form.dart';
-import 'package:fluttercuredoc/Update_Phoneno/update_phoneno_controller.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:fluttercuredoc/LogSign/SignUp/Form.dart';
+import 'package:fluttercuredoc/Profile/update_name_controller.dart';
+import 'package:fluttercuredoc/Update_Phoneno/update_phoneno_controller.dart';
 
 class ChangePhone extends StatelessWidget {
   const ChangePhone({super.key});

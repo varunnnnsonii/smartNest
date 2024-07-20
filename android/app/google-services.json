@@ -1,40 +1,40 @@
 {
   "project_info": {
-    "project_number": "202759056429",
-    "project_id": "cures-9495f",
-    "storage_bucket": "cures-9495f.appspot.com"
+    "project_number": "832571020314",
+    "project_id": "surat-e30f7",
+    "storage_bucket": "surat-e30f7.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:202759056429:android:c22b1060cbf5b0d76ddca4",
+        "mobilesdk_app_id": "1:832571020314:android:6ca102ba7d35c7cc4aeda3",
         "android_client_info": {
-          "package_name": "com.example.curesathi_doctor"
+          "package_name": "com.example.fluttercuredoc"
         }
       },
       "oauth_client": [
         {
-          "client_id": "202759056429-53178u15i6imia14ltgavcs3c000krk0.apps.googleusercontent.com",
+          "client_id": "832571020314-kgb4rerm6eqe8rra0nffkd76jvu0dnku.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBYD7Yo74DwR2ApPGB6BGu95Tw7OYjKY5o"
+          "current_key": "AIzaSyA9WwQpPiX8tKt3xOXjsWP5Kz-hhsvd3L8"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "202759056429-1e73oo6a8r3kag69fbplabbln7b54ca6.apps.googleusercontent.com",
+              "client_id": "832571020314-kgb4rerm6eqe8rra0nffkd76jvu0dnku.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "202759056429-7og0ibp77n7hq3kusqtgs1uog3ta8e6i.apps.googleusercontent.com",
+              "client_id": "832571020314-03pdlr4l7pserla3g05qhcs2vkk91v2r.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.example.curesathiDoctor.RunnerTests"
+                "bundle_id": "com.example.fluttercuredoc.RunnerTests"
               }
             }
           ]
@@ -43,42 +43,94 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:202759056429:android:7de770554c5f8cd46ddca4",
+        "mobilesdk_app_id": "1:832571020314:android:e204060cb6ea420e4aeda3",
         "android_client_info": {
-          "package_name": "com.example.tpop"
+          "package_name": "com.example.surat"
         }
       },
       "oauth_client": [
         {
-          "client_id": "202759056429-utjm7uaj3ka8ra1nl1fft9714rsgt8g7.apps.googleusercontent.com",
+          "client_id": "832571020314-mnlrr3urk54uoluttvo72a271a3b8k4b.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.tpop",
-            "certificate_hash": "913110b4dae10c275391b6f44ee9c64497c692ce"
+            "package_name": "com.example.surat",
+            "certificate_hash": "a494a4835833f5927429c79884d3dca205e6e4ff"
           }
         },
         {
-          "client_id": "202759056429-53178u15i6imia14ltgavcs3c000krk0.apps.googleusercontent.com",
+          "client_id": "832571020314-o2ejq6v1tt4l0ea1frk6ttha0j2s2le3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.surat",
+            "certificate_hash": "a15d1fb0e371ee1e02386d37984c8fa576c3c5de"
+          }
+        },
+        {
+          "client_id": "832571020314-kgb4rerm6eqe8rra0nffkd76jvu0dnku.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBYD7Yo74DwR2ApPGB6BGu95Tw7OYjKY5o"
+          "current_key": "AIzaSyA9WwQpPiX8tKt3xOXjsWP5Kz-hhsvd3L8"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "202759056429-1e73oo6a8r3kag69fbplabbln7b54ca6.apps.googleusercontent.com",
+              "client_id": "832571020314-kgb4rerm6eqe8rra0nffkd76jvu0dnku.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "202759056429-7og0ibp77n7hq3kusqtgs1uog3ta8e6i.apps.googleusercontent.com",
+              "client_id": "832571020314-03pdlr4l7pserla3g05qhcs2vkk91v2r.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.example.curesathiDoctor.RunnerTests"
+                "bundle_id": "com.example.fluttercuredoc.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:832571020314:android:8225015a865b483a4aeda3",
+        "android_client_info": {
+          "package_name": "com.example.zorka_dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "832571020314-f63rafro4f03afq10e3m3246s8qac5eh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.zorka_dev",
+            "certificate_hash": "a494a4835833f5927429c79884d3dca205e6e4ff"
+          }
+        },
+        {
+          "client_id": "832571020314-kgb4rerm6eqe8rra0nffkd76jvu0dnku.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9WwQpPiX8tKt3xOXjsWP5Kz-hhsvd3L8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "832571020314-kgb4rerm6eqe8rra0nffkd76jvu0dnku.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "832571020314-03pdlr4l7pserla3g05qhcs2vkk91v2r.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.fluttercuredoc.RunnerTests"
               }
             }
           ]

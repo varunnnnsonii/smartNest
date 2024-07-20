@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fluttercuredoc/LogSign/ForgetPass/BottomSheet.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-
+import 'package:fluttercuredoc/LogSign/ForgetPass/BottomSheet.dart';
+import 'package:fluttercuredoc/LogSign/ForgetPass/Mail.dart';
 class ForgetPasswordScreen {
   static Future<dynamic> buildShowModalBottomSheet(BuildContext context) {
     return showModalBottomSheet(
@@ -14,7 +14,7 @@ class ForgetPasswordScreen {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text('"Make Selection!"',
-               ),
+                ),
             Text('"Select one of the options given below to reset your password."',
                 ),
             const SizedBox(height: 30.0),

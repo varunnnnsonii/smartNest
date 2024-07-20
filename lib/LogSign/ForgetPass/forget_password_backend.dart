@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
+import 'package:get/get.dart';
 import 'package:fluttercuredoc/AuthenticationRepository.dart';
 import 'package:fluttercuredoc/Compo/NetwokManager.dart';
 import 'package:fluttercuredoc/Compo/full_screen_loader.dart';
+import 'package:fluttercuredoc/LogSign/ForgetPass/Mail.dart';
 import 'package:fluttercuredoc/LogSign/ForgetPass/Mail_Sent.dart';
-import 'package:get/get.dart';
 
 class ForgetPasswordController extends GetxController {
   static ForgetPasswordController get instance => Get.find();

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fluttercuredoc/Compo/NetwokManager.dart';
 import 'package:get/get.dart';
+import 'package:fluttercuredoc/Compo/NetwokManager.dart';
 
 class GeneralBindings extends Bindings{
   @override

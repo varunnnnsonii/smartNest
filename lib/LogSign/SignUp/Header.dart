@@ -28,10 +28,10 @@ class FormHeaderWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: crossAxisAlignment,
       children: [
-        Image(image: AssetImage(image), color: imageColor, height: size.height * imageHeight),
+        Image(image: AssetImage(image), color: imageColor, height: size.height * 0.2),
         SizedBox(height: heightBetween),
-        Text(title),
-        Text(subTitle, textAlign: textAlign),
+        Text(title, style: TextStyle(color: Colors.white,fontSize: 40)),
+        Text(subTitle, textAlign: textAlign,),
       ],
     );
   }

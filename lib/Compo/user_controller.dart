@@ -1,12 +1,13 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:fluttercuredoc/Compo/NetwokManager.dart';
-import 'package:fluttercuredoc/Compo/userModel.dart';
-import 'package:fluttercuredoc/Compo/user_repo.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:fluttercuredoc/Compo/NetwokManager.dart';
+import 'package:fluttercuredoc/Compo/userModel.dart';
+import 'package:fluttercuredoc/Compo/user_repo.dart';
+
 class UserController extends GetxController{
   static UserController get instance=>Get.find();
 

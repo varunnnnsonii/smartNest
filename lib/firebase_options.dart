@@ -44,41 +44,42 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBzmsFmPrB2CzgCtwJqCf2iYyHwD2iqrb4',
-    appId: '1:202759056429:web:45db3c5584647ede6ddca4',
-    messagingSenderId: '202759056429',
-    projectId: 'cures-9495f',
-    authDomain: 'cures-9495f.firebaseapp.com',
-    storageBucket: 'cures-9495f.appspot.com',
+    apiKey: 'AIzaSyCVMkZ0LjJ6HQ251hVA4rQzRGZR7SkkNXo',
+    appId: '1:832571020314:web:49149c38118139b44aeda3',
+    messagingSenderId: '832571020314',
+    projectId: 'surat-e30f7',
+    authDomain: 'surat-e30f7.firebaseapp.com',
+    storageBucket: 'surat-e30f7.appspot.com',
+    measurementId: 'G-QJVV28XR1P',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBYD7Yo74DwR2ApPGB6BGu95Tw7OYjKY5o',
-    appId: '1:202759056429:android:7de770554c5f8cd46ddca4',
-    messagingSenderId: '202759056429',
-    projectId: 'cures-9495f',
-    storageBucket: 'cures-9495f.appspot.com',
+    apiKey: 'AIzaSyA9WwQpPiX8tKt3xOXjsWP5Kz-hhsvd3L8',
+    appId: '1:832571020314:android:6ca102ba7d35c7cc4aeda3',
+    messagingSenderId: '832571020314',
+    projectId: 'surat-e30f7',
+    storageBucket: 'surat-e30f7.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBWj4BGI40zwWguK5-6fpormLdXEAWrgDU',
-    appId: '1:202759056429:ios:598ff59c4a2a0f106ddca4',
-    messagingSenderId: '202759056429',
-    projectId: 'cures-9495f',
-    storageBucket: 'cures-9495f.appspot.com',
-    androidClientId: '202759056429-utjm7uaj3ka8ra1nl1fft9714rsgt8g7.apps.googleusercontent.com',
-    iosClientId: '202759056429-v4aasc4vnetb35bmdtodk45tigemt53v.apps.googleusercontent.com',
-    iosBundleId: 'com.example.tpop',
+    apiKey: 'AIzaSyBtPeC0p6gBRYnNKo0Or5z73Yv8j4gVW_s',
+    appId: '1:832571020314:ios:86a4b4e75c2b708f4aeda3',
+    messagingSenderId: '832571020314',
+    projectId: 'surat-e30f7',
+    storageBucket: 'surat-e30f7.appspot.com',
+    androidClientId: '832571020314-f63rafro4f03afq10e3m3246s8qac5eh.apps.googleusercontent.com',
+    iosClientId: '832571020314-br36nfjs5kemf5jrcrgfa5re5oprbdhj.apps.googleusercontent.com',
+    iosBundleId: 'com.example.fluttercuredoc',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyBWj4BGI40zwWguK5-6fpormLdXEAWrgDU',
-    appId: '1:202759056429:ios:b4a15108266c19de6ddca4',
-    messagingSenderId: '202759056429',
-    projectId: 'cures-9495f',
-    storageBucket: 'cures-9495f.appspot.com',
-    androidClientId: '202759056429-utjm7uaj3ka8ra1nl1fft9714rsgt8g7.apps.googleusercontent.com',
-    iosClientId: '202759056429-svlq8ouh5b7i3ih1garbrjke9jntdq1f.apps.googleusercontent.com',
-    iosBundleId: 'com.example.tpop.RunnerTests',
+    apiKey: 'AIzaSyBtPeC0p6gBRYnNKo0Or5z73Yv8j4gVW_s',
+    appId: '1:832571020314:ios:ec010f7636d177004aeda3',
+    messagingSenderId: '832571020314',
+    projectId: 'surat-e30f7',
+    storageBucket: 'surat-e30f7.appspot.com',
+    androidClientId: '832571020314-f63rafro4f03afq10e3m3246s8qac5eh.apps.googleusercontent.com',
+    iosClientId: '832571020314-03pdlr4l7pserla3g05qhcs2vkk91v2r.apps.googleusercontent.com',
+    iosBundleId: 'com.example.fluttercuredoc.RunnerTests',
   );
 }

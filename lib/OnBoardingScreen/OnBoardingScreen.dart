@@ -1,12 +1,12 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttercuredoc/LogSign/Welcome.dart';
-import 'package:fluttercuredoc/OnBoardingScreen/OnBOardingSize.dart';
-import 'package:fluttercuredoc/OnBoardingScreen/OnBoardingContent.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
+import 'package:fluttercuredoc/Compo/ElevatedButton.dart';
+import 'package:fluttercuredoc/OnBoardingScreen/OnBOardingSize.dart';
+import 'package:fluttercuredoc/OnBoardingScreen/OnBoardingContent.dart';
+import 'package:fluttercuredoc/LogSign/Welcome.dart';
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({Key? key}) : super(key: key);
 
@@ -25,9 +25,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   int _currentPage = 0;
   List colors = const [
-    Color(0xffDAD3C8),
-    Color(0xffFFE5DE),
-    Color(0xffDCF6E6),
+    // Color(0xffDAD3C8),
+    // Color(0xffFFE5DE),
+    // Color(0xffDCF6E6),
+    Color(0xfff5f5f5),
+    Color(0xfff5f5f5),
+    Color(0xfff5f5f5),
   ];
 
   AnimatedContainer _buildDots({
@@ -39,7 +42,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         borderRadius: BorderRadius.all(
           Radius.circular(50),
         ),
-        color: Color(0xFF000000),
+        color: Colors.black87,
       ),
       margin: const EdgeInsets.only(right: 5),
       height: 10,
@@ -83,6 +86,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontFamily: "Mulish",
+                            color: Colors.black87,
                             fontWeight: FontWeight.w800,
                             fontSize: (width <= 550) ? 35 : 40,
                           ),
@@ -92,6 +96,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           contents[i].desc,
                           style: TextStyle(
                             fontFamily: "Mulish",
+                            color: Colors.black87,
                             fontWeight: FontWeight.w300,
                             fontSize: (width <= 550) ? 17 : 25,
                           ),
@@ -120,28 +125,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   _currentPage + 1 == contents.length
                       ? Padding(
                     padding: const EdgeInsets.all(30),
-                    child: ElevatedButton(
-                      onPressed: () async{
-                        final pres = await SharedPreferences.getInstance();
-                        pres.setBool('onboarding', true);
-                        Get.off(WelcomeScreen());
-                      },
-                      child: const Text("START"),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.black,
-                        elevation: 4,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(50),
-                        ),
-                        padding: (width <= 550)
-                            ? const EdgeInsets.symmetric(
-                            horizontal: 110, vertical: 20)
-                            : EdgeInsets.symmetric(
-                            horizontal: width * 0.2, vertical: 25),
-                        textStyle:
-                        TextStyle(fontSize: (width <= 550) ? 19 : 17 ,fontWeight: FontWeight.bold),
-                      ),
-                    ),
+
+                    child:CustomElevatedButton(title: "START", color1: Color(0xffC7ADFF), color2: Color(0xff7151A9),padh: 100,padv: 20,onPressed: () async{
+                      final pres = await SharedPreferences.getInstance();
+                      pres.setBool('onboarding', true);
+                      Get.off(WelcomeScreen());
+                    },)
                   )
                       : Padding(
                     padding: const EdgeInsets.all(30),
@@ -154,13 +143,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           },
                           child: const Text(
                             "SKIP",
-                            style: TextStyle(color: Colors.black),
+                            style: TextStyle(color: Color(0xff7151A9)),
                           ),
                           style: TextButton.styleFrom(
                             backgroundColor: Colors.transparent,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(50),
-                              side: BorderSide(color: Colors.black),
+                              side: BorderSide(color: Colors.black87),
                             ),
                             elevation: 0,
                             padding: (width <= 550)
@@ -174,30 +163,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             ),
                           ),
                         ),
-                        ElevatedButton(
-                          onPressed: () {
-                            _controller.nextPage(
-                              duration: const Duration(milliseconds: 200),
-                              curve: Curves.easeIn,
-                            );
-                          },
-                          child: const Text("NEXT"),
-                          style: ElevatedButton.styleFrom(
-
-                            backgroundColor: Colors.black,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(50),
-                            ),
-                            elevation: 4,
-                            padding: (width <= 550)
-                                ? const EdgeInsets.symmetric(
-                                horizontal:30, vertical: 15)
-                                : const EdgeInsets.symmetric(
-                                horizontal: 30, vertical: 25),
-                            textStyle: TextStyle(
-                                fontSize: (width <= 550) ? 17 : 17),
-                          ),
-                        ),
+                        CustomElevatedButton(title: "NEXT", color1: Color(0xffC7ADFF), color2: Color(0xff7151A9),padh: 27,padv: 15, onPressed:  () {
+                          _controller.nextPage(
+                            duration: const Duration(milliseconds: 200),
+                            curve: Curves.easeIn,
+                          );
+                        },)
                       ],
                     ),
                   )

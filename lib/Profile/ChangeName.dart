@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fluttercuredoc/LogSign/SignUp/Form.dart';
-import 'package:fluttercuredoc/Profile/update_name_controller.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:fluttercuredoc/LogSign/SignUp/Form.dart';
+import 'package:fluttercuredoc/Profile/update_name_controller.dart';
 
 class ChangeName extends StatelessWidget {
   const ChangeName({super.key});

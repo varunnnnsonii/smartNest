@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:fluttercuredoc/Compo/ElevatedButton.dart';
+import 'package:fluttercuredoc/LogSign/ForgetPass/ForgetPass.dart';
 import 'package:fluttercuredoc/LogSign/ForgetPass/Mail.dart';
 import 'package:fluttercuredoc/LogSign/Login/login_backend.dart';
 import 'package:fluttercuredoc/LogSign/SignUp/Form.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
+import 'package:fluttercuredoc/Pages/Home/Home.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({
@@ -23,35 +26,60 @@ class LoginForm extends StatelessWidget {
             TextFormField(
               controller: controller.email,
               validator: (value) => Validator.validateEmail(value),
+              style: TextStyle(color: Colors.black87), // Set input text color to white
               decoration: InputDecoration(
-                  prefixIcon: Icon(Icons.person_outline_outlined),
-                  labelText: 'Email',
-                  hintText: 'Email',
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  )),
+                prefixIcon: Icon(
+                  Icons.person_outline_outlined,
+                  color: Colors.black87, // Set icon color to white
+                ),
+                labelText: 'Email',
+                labelStyle: TextStyle(color: Colors.black87), // Set title color to white
+                hintText: 'Email',
+                hintStyle: TextStyle(color: Colors.black87), // Set hint text color to white
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: BorderSide(color: Colors.black87), // Set border color to white
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: BorderSide(color: Colors.black87), // Set border color to white
+                ),
+              ),
             ),
-            const SizedBox(height: 30 - 20),
+
+            const SizedBox(height: 30),
             Obx(
-              () => TextFormField(
+                  () => TextFormField(
                 controller: controller.password,
                 validator: (value) => Validator.validateEmptyText('Password',value),
                 obscureText: controller.hidePassword.value,
+                style: TextStyle(color: Colors.black87), // Set input text color to white
                 decoration: InputDecoration(
-                    label: Text('Password'),
-                    prefixIcon: Icon(Icons.fingerprint),
-                    suffixIcon: IconButton(
-                      onPressed: () => controller.hidePassword.value =
-                          !controller.hidePassword.value,
-                      icon: Icon(controller.hidePassword.value
+                  labelText: 'Password',
+                  labelStyle: TextStyle(color: Colors.black87), // Set title color to white
+                  prefixIcon: Icon(Icons.fingerprint, color: Colors.black87), // Set icon color to white
+                  suffixIcon: IconButton(
+                    onPressed: () => controller.hidePassword.value =
+                    !controller.hidePassword.value,
+                    icon: Icon(
+                      controller.hidePassword.value
                           ? Icons.remove_red_eye_outlined
-                          : Icons.remove_red_eye),
+                          : Icons.remove_red_eye,
+                      color: Colors.black87, // Set icon color to white
                     ),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    )),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    borderSide: BorderSide(color: Colors.black87), // Set border color to white
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    borderSide: BorderSide(color: Colors.black87), // Set border color to white
+                  ),
+                ),
               ),
             ),
+
             const SizedBox(height: 30 - 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -64,23 +92,20 @@ class LoginForm extends StatelessWidget {
                           onChanged: (value) => controller.rememberMe.value =
                               !controller.rememberMe.value),
                     ),
-                    Text('Remember me'),
+                    Text('Remember me',style: TextStyle(color: Color(0xff7151A9)),),
                   ],
                 ),
                 TextButton(
                     onPressed: () =>
                       Get.to(ForgetPasswordMailScreen()),
 
-                    child: const Text('Forget Password?')),
+                    child: const Text('Forget Password?',style: TextStyle(color: Color(0xffC7ADFF)),)),
               ],
             ),
             SizedBox(
               width: double.infinity,
-              child: ElevatedButton(
-                onPressed: ()=>
-                  controller.emailAndPasswordSignIn(),
-                child: Text('Login'.toUpperCase()),
-              ),
+              child:CustomElevatedButton(title: "LOGIN", color1: Color(0xffC7ADFF), color2: Color(0xff7151A9), onPressed: ()=>
+                  controller.emailAndPasswordSignIn() , padh: 20, padv: 10)
             ),
           ],
         ),

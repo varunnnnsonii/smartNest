@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:fluttercuredoc/LogSign/Login/Login.dart';
 import 'package:fluttercuredoc/LogSign/Login/login_backend.dart';
-import 'package:get/get.dart';
-
 class SignUpFooterWidget extends StatelessWidget {
   const SignUpFooterWidget({
     Key? key,
@@ -13,7 +12,8 @@ class SignUpFooterWidget extends StatelessWidget {
     final controller = Get.put(LoginController());
     return Column(
       children: [
-        const Text("OR"),
+        const Text("OR",style: TextStyle(color: Colors.white),),
+        SizedBox(height: 20,),
         SizedBox(
           width: double.infinity,
           child: OutlinedButton.icon(
@@ -22,7 +22,7 @@ class SignUpFooterWidget extends StatelessWidget {
               image: AssetImage('assets/images/google.png'),
               width: 20.0,
             ),
-            label: Text('Sign-In with Google'.toUpperCase()),
+            label: Text('Sign-In with Google'.toUpperCase(),style: TextStyle(color: Colors.white),),
           ),
         ),
         TextButton(
@@ -33,9 +33,10 @@ class SignUpFooterWidget extends StatelessWidget {
           },
           child: Text.rich(TextSpan(children: [
             TextSpan(
-              text: "Already have an Account?"
+              text: "Already have an Account?",
+              style: TextStyle(color: Colors.white),
             ),
-            TextSpan(text: "Login".toUpperCase())
+            TextSpan(text: "  Login".toUpperCase())
           ])),
         )
       ],

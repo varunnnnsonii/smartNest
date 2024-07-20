@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:fluttercuredoc/AuthenticationRepository.dart';
 import 'package:fluttercuredoc/Compo/verify_email_cont.dart';
-import 'package:get/get.dart';
-
+import 'package:fluttercuredoc/LogSign/Login/Login.dart';
+import 'package:fluttercuredoc/LogSign/SignUp/success_screen.dart';
 class VerifyEmail extends StatelessWidget {
   const VerifyEmail({super.key, this.email});
   final String? email;

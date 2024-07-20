@@ -2,14 +2,16 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:fluttercuredoc/LogSign/Login/Login.dart';
 import 'package:fluttercuredoc/LogSign/SignUp/VerifyEmail.dart';
 import 'package:fluttercuredoc/LogSign/Welcome.dart';
 import 'package:fluttercuredoc/Navbar/nav_menu.dart';
 import 'package:fluttercuredoc/OnBoardingScreen/OnBoardingScreen.dart';
-import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
-import 'package:google_sign_in/google_sign_in.dart';
+import 'package:fluttercuredoc/Pages/Home/Home.dart';
+import 'package:fluttercuredoc/Pages/RoomDetails/initialize_house.dart';
 
 class AuthenticationRepository extends GetxController {
   static AuthenticationRepository get instance => Get.find();
@@ -31,7 +33,7 @@ class AuthenticationRepository extends GetxController {
     final user = _auth.currentUser;
     if (user != null) {
       if (user.emailVerified) {
-        Get.offAll(() => const NavigationMenu());
+        Get.offAll(() => const InitilizePage());
       } else {
         Get.offAll(() => VerifyEmail(email: _auth.currentUser?.email));
       }

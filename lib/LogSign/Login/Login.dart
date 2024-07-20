@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:fluttercuredoc/LogSign/Login/Footer.dart';
 import 'package:fluttercuredoc/LogSign/Login/Form.dart';
 import 'package:fluttercuredoc/LogSign/Login/Header.dart';
-
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
@@ -11,6 +10,7 @@ class LoginScreen extends StatelessWidget {
     //Get the size in LoginHeaderWidget()
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Color(0xfff5f5f5),
         body: SingleChildScrollView(
           child: Container(
             padding: const EdgeInsets.all(30),
