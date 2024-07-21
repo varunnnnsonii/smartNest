@@ -35,6 +35,7 @@ class _FloorPlanState extends State<FloorPlan> {
             return AlertDialog(
               backgroundColor: Colors.white,
               title: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Icon(Icons.edit, color: Colors.blue, size: 24),
                   SizedBox(width: 8),
@@ -76,7 +77,7 @@ class _FloorPlanState extends State<FloorPlan> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(appliance, style: TextStyle(color: Colors.black)),
+                              Text(appliance, style: TextStyle(color: Colors.black54,fontWeight: FontWeight.w500,fontSize: 18)),
                               Switch(
                                 value: appliances[appliance]! > 0,
                                 activeColor: Colors.blue,
@@ -102,7 +103,7 @@ class _FloorPlanState extends State<FloorPlan> {
                                     });
                                   },
                                 ),
-                                Text(appliances[appliance].toString(), style: TextStyle(color: Colors.black)),
+                                Text(appliances[appliance].toString(), style: TextStyle(color: Colors.black,fontSize: 19)),
                                 IconButton(
                                   icon: Icon(Icons.add, color: Colors.blue),
                                   onPressed: () {
@@ -127,9 +128,9 @@ class _FloorPlanState extends State<FloorPlan> {
                     appliances.updateAll((key, value) => 0);
                     Navigator.of(context).pop();
                   },
-                  child: Text('Cancel', style: TextStyle(color: Colors.blue)),
+                  child: Text('Cancel', style: TextStyle(color: Colors.grey,fontSize: 18)),
                 ),
-                TextButton(
+                ElevatedButton(
                   onPressed: () {
                     if (_selectedRoomType != null) {
                       setState(() {
@@ -146,8 +147,15 @@ class _FloorPlanState extends State<FloorPlan> {
                       // Placeholder function to store data to a database
                     }
                   },
-                  child: Text('Submit', style: TextStyle(color: Colors.blue)),
-                ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue, // Set the background color to blue
+                  ),
+                  child: Text(
+                    'Submit',
+                    style: TextStyle(color: Colors.white, fontSize: 18),
+                  ),
+                )
+
               ],
             );
           },
@@ -190,6 +198,7 @@ class _FloorPlanState extends State<FloorPlan> {
                 color: Colors.white,
               ),
             ),
+            SizedBox(height: 40,),
             Expanded(
               child: FloorPlan.rooms.isEmpty
                   ?  Center(child: Image.asset("assets/images/download-removebg-preview.png"))
@@ -198,16 +207,36 @@ class _FloorPlanState extends State<FloorPlan> {
                 itemBuilder: (context, index) {
                   final room = FloorPlan.rooms[index];
                   return Card(
+                    margin: EdgeInsets.only(top: 20),
+                    color: Colors.white,
+                    elevation: 3,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
                     child: ListTile(
-                      leading: Text(room['roomName']),
+                      contentPadding: EdgeInsets.all(10),
+                      leading: Text(
+                        room['roomName'],
+                        style: TextStyle(
+                          color: Colors.blue,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                        ),
+                      ),
                       title: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: room['appliances'].entries.map<Widget>((entry) {
-                          return Text('${entry.key}: ${entry.value}');
+                          return Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 2.0),
+                            child: Text(
+                              '${entry.key}: ${entry.value}',
+                              style: TextStyle(color: Colors.black),
+                            ),
+                          );
                         }).toList(),
                       ),
                       trailing: IconButton(
-                        icon: const Icon(Icons.delete),
+                        icon: Icon(Icons.delete, color: Colors.blue),
                         onPressed: () => _deleteRoom(index),
                       ),
                     ),

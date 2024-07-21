@@ -99,12 +99,12 @@ class LoginForm extends StatelessWidget {
                     onPressed: () =>
                       Get.to(ForgetPasswordMailScreen()),
 
-                    child: const Text('Forget Password?',style: TextStyle(color: Color(0xffC7ADFF)),)),
+                    child: const Text('Forget Password?',style: TextStyle(color: Colors.blueAccent),)),
               ],
             ),
             SizedBox(
               width: double.infinity,
-              child:CustomElevatedButton(title: "LOGIN", color1: Color(0xffC7ADFF), color2: Color(0xff7151A9), onPressed: ()=>
+              child:CustomElevatedButton(title: "LOGIN", color1: Colors.blueAccent.shade100, color2: Colors.blueAccent, onPressed: ()=>
                   controller.emailAndPasswordSignIn() , padh: 20, padv: 10)
             ),
           ],

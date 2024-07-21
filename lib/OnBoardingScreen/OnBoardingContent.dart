@@ -12,20 +12,19 @@ class OnboardingContents {
 
 List<OnboardingContents> contents = [
   OnboardingContents(
-    title: "Filter your meals",
-    image: "assets/images/f354da0dff20388a4de8ad0100d6f1a7-removebg-preview.png",
-    desc: "Filter out your meals based on spending limit and diet, and get personalized recommendations of meals.",
+    title: "Automate Home ",
+    image: "assets/images/board1.jpg",
+    desc: "Smart Nest seamlessly integrates with your household devices",
   ),
   OnboardingContents(
-    title: "Get Live Outlets",
-    image: "assets/images/2265bf36f4ea60ca74c665e94cc58c0c-removebg-preview.png",
+    title: "Anamoly Identify ",
+    image: "assets/images/board2.jpg",
     desc:
-    "Get to know the live location of outlets and book your reservation.",
+    "Smart Nest leverages advanced anomaly detection algorithms to monitor home activity in real-time. When no one is home, the app intelligently ",
   ),
   OnboardingContents(
-    title: "Get notified when community engage",
-    image: "assets/images/5aa46c23083a60b2dd691147e8b4a98d-removebg-preview.png",
-    desc:
-    "Take control of notifications, collaborate live or on your own time.",
+    title: "Environment Friendly",
+    image: "assets/images/WhatsApp Image 2024-07-21 at 01.47.53.jpeg",
+    desc:"Smart Nest helps you understand your environmental impact , contributing to a greener society."
   ),
 ];

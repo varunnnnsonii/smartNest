@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttercuredoc/Pages/Home.dart';
+import 'package:fluttercuredoc/Pages/userdata/user_page.dart';
 import 'package:get/get.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import 'package:fluttercuredoc/Pages/Home/Home.dart';
@@ -18,7 +20,7 @@ class NavigationMenu extends StatelessWidget {
             topLeft: Radius.circular(20.0),
             topRight: Radius.circular(20.0),
           ),
-          color: Color(0xff7151A9),
+          color: Colors.blueAccent,
         ),
         padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 20.0),
         child: Obx(
@@ -35,16 +37,16 @@ class NavigationMenu extends StatelessWidget {
 
             /// Likes
             SalomonBottomBarItem(
-              icon: Icon(CupertinoIcons.map_fill, size: 27),
-              title: Text("Map"),
+              icon: Icon(CupertinoIcons.settings, size: 27),
+              title: Text("Operating"),
               selectedColor: Colors.white,
             ),
 
 
             /// Profile
             SalomonBottomBarItem(
-              icon: Icon(CupertinoIcons.person_2_fill, size: 27),
-              title: Text("Community"),
+              icon: Icon(CupertinoIcons.graph_square_fill, size: 27),
+              title: Text("Enanlyis"),
               selectedColor: Colors.white,
             ),
           ],
@@ -60,5 +62,5 @@ class NavigationMenu extends StatelessWidget {
 class NavigationController extends GetxController{
   final Rx<int> currentIndex= 0.obs;
 
-  final screens = [HomePage(),userprofile()];
+  final screens = [HomePage(),UserPagess(),ChartScreen()];
 }

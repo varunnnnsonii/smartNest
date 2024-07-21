@@ -110,6 +110,7 @@ class AuthenticationRepository extends GetxController {
     } catch (e) {
       print('Google error: $e'); // Log the error for debugging
       if (e.toString().contains('google is not send')) {
+        print(e);
         throw 'Google error';
       } else {
         throw 'oOOOOPSSSSS Google'; // For other errors

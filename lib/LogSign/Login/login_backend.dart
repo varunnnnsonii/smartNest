@@ -68,7 +68,7 @@ class LoginController extends GetxController {
 
   Future<void> googleSignIn() async {
     try {
-      FullScreenLoader.openLoadingDialog('Logging you in...', 'assets/images/Animation - 1711198222153.json');
+      FullScreenLoader.openLoadingDialog('Logging you in...', 'assets/images/WhatsApp Image 2024-07-21 at 01.47.53.jpeg');
 
       final isConnected = await NetworkManager.instance.isConnected();
       if(!isConnected){

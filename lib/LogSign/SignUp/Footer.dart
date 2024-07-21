@@ -12,7 +12,7 @@ class SignUpFooterWidget extends StatelessWidget {
     final controller = Get.put(LoginController());
     return Column(
       children: [
-        const Text("OR",style: TextStyle(color: Colors.white),),
+        const Text("OR",style: TextStyle(color: Colors.black),),
         SizedBox(height: 20,),
         SizedBox(
           width: double.infinity,
@@ -22,7 +22,7 @@ class SignUpFooterWidget extends StatelessWidget {
               image: AssetImage('assets/images/google.png'),
               width: 20.0,
             ),
-            label: Text('Sign-In with Google'.toUpperCase(),style: TextStyle(color: Colors.white),),
+            label: Text('Sign-In with Google'.toUpperCase(),style: TextStyle(color: Colors.black),),
           ),
         ),
         TextButton(
@@ -34,7 +34,7 @@ class SignUpFooterWidget extends StatelessWidget {
           child: Text.rich(TextSpan(children: [
             TextSpan(
               text: "Already have an Account?",
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: Colors.black),
             ),
             TextSpan(text: "  Login".toUpperCase())
           ])),

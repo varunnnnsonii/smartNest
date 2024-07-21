@@ -126,7 +126,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       ? Padding(
                     padding: const EdgeInsets.all(30),
 
-                    child:CustomElevatedButton(title: "START", color1: Color(0xffC7ADFF), color2: Color(0xff7151A9),padh: 100,padv: 20,onPressed: () async{
+                    child:CustomElevatedButton(title: "START", color1: Colors.blueAccent.shade100 , color2: Colors.blueAccent,padh: 100,padv: 20,onPressed: () async{
                       final pres = await SharedPreferences.getInstance();
                       pres.setBool('onboarding', true);
                       Get.off(WelcomeScreen());
@@ -143,7 +143,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           },
                           child: const Text(
                             "SKIP",
-                            style: TextStyle(color: Color(0xff7151A9)),
+                            style: TextStyle(color: Colors.blueAccent),
                           ),
                           style: TextButton.styleFrom(
                             backgroundColor: Colors.transparent,
@@ -163,7 +163,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             ),
                           ),
                         ),
-                        CustomElevatedButton(title: "NEXT", color1: Color(0xffC7ADFF), color2: Color(0xff7151A9),padh: 27,padv: 15, onPressed:  () {
+                        CustomElevatedButton(title: "NEXT", color1: Colors.blueAccent.shade100, color2: Colors.blueAccent,padh: 27,padv: 15, onPressed:  () {
                           _controller.nextPage(
                             duration: const Duration(milliseconds: 200),
                             curve: Curves.easeIn,

@@ -23,7 +23,7 @@ class UserRepository extends GetxController {
     } on FormatException catch (_) {
       throw const FormatException();
     } catch (e) {
-      throw 'OOOOPSSSSSyyy';
+      throw 'OOOOPSSSSSyyy   ';
     }
   }
 

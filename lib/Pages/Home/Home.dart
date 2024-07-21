@@ -1,5 +1,10 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttercuredoc/Profile/EditProfile.dart';
+import 'package:fluttercuredoc/Profile/Profile.dart';
+import 'package:fluttercuredoc/WIDGETS/in_out.dart';
+import 'package:fluttercuredoc/WIDGETS/short_noti.dart';
 import 'package:get/get.dart';
 import 'package:fluttercuredoc/Compo/user_controller.dart';
 import 'package:fluttercuredoc/Pages/RoomDetails/detials/details_room.dart';
@@ -15,42 +20,78 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final Map<String, String> roomImages = {
-    'Living Room': 'assets/icons/living-room.gif',
+    'Living Room': 'assets/icons/WhatsApp Image 2024-07-20 at 18.27.17_ceb4c461.jpg',
     'Room': 'assets/icons/WhatsApp Image 2024-07-20 at 18.27.27_84a553a2.jpg',
-    'Kitchen': 'assets/icons/stir.gif',
-    'Bedroom': 'assets/icons/sleep.gif',
+    'Kitchen': 'assets/icons/WhatsApp Image 2024-07-20 at 18.27.17_ceb4c461.jpg',
+    'Bedroom': 'assets/icons/WhatsApp Image 2024-07-20 at 18.27.17_ceb4c461.jpg',
     'Passage': 'assets/icons/WhatsApp Image 2024-07-20 at 18.27.17_ceb4c461.jpg',
     'Balcony': 'assets/icons/balcony (1).png',
     'Storeroom': 'assets/icons/WhatsApp Image 2024-07-20 at 18.27.22_a7e0bd58.jpg',
   };
 
   final Map<String, Color> roomColors = {
-    'Living Room': Colors.blueAccent,
-    'Room': Colors.greenAccent,
-    'Kitchen': Colors.redAccent,
-    'Bedroom': Colors.purpleAccent,
-    'Passage': Colors.orangeAccent,
-    'Gallery': Colors.tealAccent,
-    'Storeroom': Colors.brown,
+    'Living Room': Colors.lightBlue.shade100,
+    'Room': Colors.lightGreen.shade100,
+    'Kitchen': Colors.red.shade100,
+    'Bedroom': Colors.purple.shade100,
+    'Passage': Colors.orange.shade100,
+    'Gallery': Colors.teal.shade100,
+    'Storeroom': Colors.brown.shade100,
   };
 
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(UserController());
     return Scaffold(
-      body: CustomScrollView(
-        slivers: [
-          SliverPadding(
-            padding: const EdgeInsets.all(8.0),
-            sliver: SliverGrid(
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                crossAxisSpacing: 8.0,
-                mainAxisSpacing: 8.0,
-                childAspectRatio: 0.75, // Height greater than width
+      appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: Colors.white,
+        title: Text("Smart Nest"),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              color: Colors.white,
+              height: 350,
+              child: Column(
+                children: [
+                  Container(
+                    height:130,
+                    child: ShortNoti(),
+                  ),
+                  Container(
+                    height:160,
+                    child: Padding(
+                      padding: const EdgeInsets.only(bottom: 0.0,top: 30),
+                      child: InorOut(),
+                    ),
+                  ),
+                ],
               ),
-              delegate: SliverChildBuilderDelegate(
-                    (BuildContext context, int index) {
+            ),
+            SizedBox(height: 30),
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0),
+              child: Row(
+                children: [
+                  Text("Rooms", style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500)),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: GridView.builder(
+                shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(), // Disable GridView scrolling
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 20.0,
+                  mainAxisSpacing: 20.0,
+                  childAspectRatio: 0.93, // Height greater than width
+                ),
+                itemCount: FloorPlan.rooms.length,
+                itemBuilder: (BuildContext context, int index) {
                   final room = FloorPlan.rooms[index];
                   final roomName = room['roomName'];
                   final imagePath = roomImages[roomName] ?? 'assets/default.png';
@@ -59,6 +100,7 @@ class _HomePageState extends State<HomePage> {
 
                   return GestureDetector(
                     onTap: () {
+
                       Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -69,33 +111,56 @@ class _HomePageState extends State<HomePage> {
                     child: Container(
                       decoration: BoxDecoration(
                         color: bgColor,
-                        borderRadius: BorderRadius.circular(12.0),
+                        borderRadius: BorderRadius.circular(25.0),
                       ),
                       child: Column(
                         children: [
+                          SizedBox(height: 20),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: isNetworkImage
-                                ? CachedNetworkImage(
-                              imageUrl: imagePath,
+                            child: imagePath.endsWith('.gif')
+                                ? Container(
                               height: 100.0,
-                              fit: BoxFit.cover,
-                              placeholder: (context, url) =>
-                                  CircularProgressIndicator(),
-                              errorWidget: (context, url, error) =>
-                                  Icon(Icons.error),
+                              width: 100.0,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Colors.white,
+                              ),
+                              child: Icon(Icons.error, color: Colors.red),
                             )
-                                : Image.asset(
-                              imagePath,
-                              height: 100.0,
-                              fit: BoxFit.cover,
+                                : ClipOval(
+                              child: isNetworkImage
+                                  ? CachedNetworkImage(
+                                imageUrl: imagePath,
+                                height: 100.0,
+                                width: 100.0,
+                                fit: BoxFit.cover,
+                                placeholder: (context, url) => Container(
+                                  height: 50.0,
+                                  width: 50.0,
+                                  alignment: Alignment.center,
+                                  child: CircularProgressIndicator(),
+                                ),
+                                errorWidget: (context, url, error) => Container(
+                                  height: 100.0,
+                                  width: 100.0,
+                                  alignment: Alignment.center,
+                                  child: Icon(Icons.error, color: Colors.red),
+                                ),
+                              )
+                                  : Image.asset(
+                                imagePath,
+                                height: 80.0,
+                                width: 70.0,
+                                fit: BoxFit.contain,
+                              ),
                             ),
                           ),
-                          Spacer(),
+                          SizedBox(height: 15),
                           Text(
                             roomName,
                             style: TextStyle(
-                              fontSize: 16.0,
+                              fontSize: 20.0,
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
                             ),
@@ -106,11 +171,10 @@ class _HomePageState extends State<HomePage> {
                     ),
                   );
                 },
-                childCount: FloorPlan.rooms.length,
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

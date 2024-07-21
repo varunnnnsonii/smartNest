@@ -10,7 +10,7 @@ class LoginHeaderWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Image(
-            image: const AssetImage('assets/images/zorko__1_-removebg-preview.png'),
+            image: const AssetImage('assets/images/WhatsApp Image 2024-07-21 at 01.47.53.jpeg'),
             height: size.height * 0.4,
         ),
         Text("Welcome Back,", style: TextStyle(color: Colors.black87,fontSize: 40,fontWeight: FontWeight.w500)),

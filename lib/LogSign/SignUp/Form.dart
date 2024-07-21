@@ -52,18 +52,18 @@ class SignUpFormWidget extends StatelessWidget {
             TextFormField(
               controller: controller.fullName,
               validator: (value) => Validator.validateEmptyText('FullName', value),
-              style: TextStyle(color: Colors.white), // Set input text color to white
+              style: TextStyle(color: Colors.black), // Set input text color to white
               decoration: InputDecoration(
                 labelText: 'FullName',
-                labelStyle: TextStyle(color: Colors.white), // Set title color to white
-                prefixIcon: Icon(Icons.person_outline_rounded, color: Colors.white), // Set icon color to white
+                labelStyle: TextStyle(color: Colors.black), // Set title color to white
+                prefixIcon: Icon(Icons.person_outline_rounded, color: Colors.black), // Set icon color to white
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(color: Colors.white), // Set border color to white
+                  borderSide: BorderSide(color: Colors.black), // Set border color to white
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(color: Colors.white), // Set border color to white
+                  borderSide: BorderSide(color: Colors.black), // Set border color to white
                 ),
               ),
             ),
@@ -72,54 +72,55 @@ class SignUpFormWidget extends StatelessWidget {
             TextFormField(
                 controller: controller.userName,
               validator: (value)=>Validator.validateEmptyText('UserName', value) ,
-              style: TextStyle(color: Colors.white), // Set input text color to white
+              style: TextStyle(color: Colors.black), // Set input text color to white
               decoration: InputDecoration(
                 labelText: 'UserName',
-                labelStyle: TextStyle(color: Colors.white), // Set title color to white
-                prefixIcon: Icon(Icons.person_outline_rounded, color: Colors.white), // Set icon color to white
+                labelStyle: TextStyle(color: Colors.black), // Set title color to white
+                prefixIcon: Icon(Icons.person_outline_rounded, color: Colors.black), // Set icon color to white
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(color: Colors.white), // Set border color to white
+                  borderSide: BorderSide(color: Colors.black), // Set border color to white
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(color: Colors.white), // Set border color to white
+                  borderSide: BorderSide(color: Colors.black), // Set border color to white
                 ),
               ),            ),
             const SizedBox(height: 30 - 20),
             TextFormField(
                 controller: controller.email,
               validator: (value)=>Validator.validateEmail(value) ,
-              style: TextStyle(color: Colors.white), // Set input text color to white
+              style: TextStyle(color: Colors.black), // Set input text color to white
               decoration: InputDecoration(
                 labelText: 'Email',
-                labelStyle: TextStyle(color: Colors.white), // Set title color to white
-                prefixIcon: Icon(Icons.email_outlined, color: Colors.white), // Set icon color to white
+                labelStyle: TextStyle(color: Colors.black), // Set title color to white
+                prefixIcon: Icon(Icons.email_outlined, color: Colors.black), // Set icon color to white
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(color: Colors.white), // Set border color to white
+                  borderSide: BorderSide(color: Colors.black), // Set border color to white
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(color: Colors.white), // Set border color to white
+                  borderSide: BorderSide(color: Colors.black), // Set border color to white
                 ),
               ),            ),
             const SizedBox(height: 30 - 20),
             TextFormField(
+              keyboardType: TextInputType.phone,
                 controller: controller.phoneNo,
               validator: (value)=>Validator.validatePhoneNumber( value) ,
-              style: TextStyle(color: Colors.white), // Set input text color to white
+              style: TextStyle(color: Colors.black), // Set input text color to white
               decoration: InputDecoration(
                 labelText: 'PhoneNo',
-                labelStyle: TextStyle(color: Colors.white), // Set title color to white
-                prefixIcon: Icon(Icons.phone, color: Colors.white), // Set icon color to white
+                labelStyle: TextStyle(color: Colors.black), // Set title color to white
+                prefixIcon: Icon(Icons.phone, color: Colors.black), // Set icon color to white
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(color: Colors.white), // Set border color to white
+                  borderSide: BorderSide(color: Colors.black), // Set border color to white
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(color: Colors.white), // Set border color to white
+                  borderSide: BorderSide(color: Colors.black), // Set border color to white
                 ),
               ),
             ),
@@ -128,32 +129,32 @@ class SignUpFormWidget extends StatelessWidget {
               ()=>TextFormField(
                   controller: controller.password,
                 validator: (value)=>Validator.validatePassword( value) ,
-                style: TextStyle(color: Colors.white), // Set input text color to white
+                style: TextStyle(color: Colors.black), // Set input text color to white
                 obscureText: controller.hidePassword.value,
                 decoration:InputDecoration(
-                  labelStyle: TextStyle(color: Colors.white),
-                    label: Text('Password',style: TextStyle(color: Colors.white),),
-                    prefixIcon: Icon(Icons.fingerprint,color: Colors.white,),
+                  labelStyle: TextStyle(color: Colors.black),
+                    label: Text('Password',style: TextStyle(color: Colors.black),),
+                    prefixIcon: Icon(Icons.fingerprint,color: Colors.black,),
                     suffixIcon: IconButton(
                       onPressed:() => controller.hidePassword.value = !controller.hidePassword.value,
-                        icon: Icon(controller.hidePassword.value ? Icons.remove_red_eye_outlined :Icons.remove_red_eye,color: Colors.white,),),
+                        icon: Icon(controller.hidePassword.value ? Icons.remove_red_eye_outlined :Icons.remove_red_eye,color: Colors.black,),),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: Colors.white), // Set border color to white
+                    borderSide: BorderSide(color: Colors.black), // Set border color to white
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: Colors.white), // Set border color to white
+                    borderSide: BorderSide(color: Colors.black), // Set border color to white
                   ),),
               ),
             ),
-            const SizedBox(height: 30 - 10),
+            const SizedBox(height: 50),
             SizedBox(
               width: double.infinity,
               child: Container(
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
-                    colors: [Color(0xffC7ADFF), Color(0xff7151A9)], // Your gradient colors
+                    colors: [Colors.lightBlue.shade100, Colors.lightBlue], // Your gradient colors
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                   ),

@@ -19,12 +19,12 @@ class WelcomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Image(image: const AssetImage("assets/images/zorko-removebg-preview.png"), height: height * 0.6),
+            Image(image: const AssetImage("assets/images/WhatsApp Image 2024-07-21 at 01.47.53.jpeg"), height: height * 0.6),
             Column(
               children: [
-                Text("Login & SignUp", style:TextStyle(color: Color(0xff7151A9),fontSize: 40,fontWeight: FontWeight.w600)),
+                Text("Login & SignUp", style:TextStyle(color: Colors.lightBlue,fontSize: 40,fontWeight: FontWeight.w600)),
                 SizedBox(height: 20,),
-                Text("ZORKO : Where every bite tells a story",
+                Text("",
                     style: TextStyle(color: Colors.black87,fontSize: 18,fontWeight: FontWeight.w500),),
                     //textAlign: TextAlign.center),
               ],
@@ -42,7 +42,7 @@ class WelcomeScreen extends StatelessWidget {
                       padding: EdgeInsets.only(top: 15,bottom: 15,left: 10,right: 10),
                       side: BorderSide(color: Colors.black87)
                     ),
-                    child: Text("Login".toUpperCase(),style: TextStyle(fontSize: 17,color: Color(0xff7151A9)),),
+                    child: Text("Login".toUpperCase(),style: TextStyle(fontSize: 17,color: Colors.lightBlue),),
                   ),
                 ),
                 const SizedBox(width: 10.0),
@@ -50,7 +50,7 @@ class WelcomeScreen extends StatelessWidget {
                   child: Container(
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
-                        colors: [Color(0xffC7ADFF), Color(0xff7151A9)], // Your gradient colors
+                        colors: [Colors.lightBlueAccent, Colors.lightBlue], // Your gradient colors
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
                       ),
